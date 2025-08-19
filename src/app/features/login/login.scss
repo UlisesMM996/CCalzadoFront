@@ -1,0 +1,290 @@
+.background-container{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.background-container-top {
+    position: relative;
+    width: 100%;
+    height: 50%;
+    background-image: url('/assets/shoe-factory.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(47, 87, 147, 0.8); /* Azul con 50% de transparencia */
+}
+
+@keyframes fadeInSlide {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    color: white;
+    padding: 20px 25px;
+
+    opacity: 0;
+    animation: fadeInSlide 1s ease-out forwards;
+    animation-delay: 0.3s; /* Espera antes de empezar */
+}
+
+.background-container-bottom{
+    position: relative;
+    width: 100%;
+    height: 50%;
+    background-color: rgb(236, 243, 249);
+    background-size: cover;
+    background-position: center;
+}
+
+.login-wrapper {
+    position: absolute; /* <-- clave */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* <-- centra perfectamente */
+    z-index: 2; /* encima de overlays o backgrounds */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.login-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  width: 360px;
+  padding: 30px 30px 40px;
+  position: relative;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.tab-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+  border-bottom: 2px solid #eee;
+}
+
+.tab-header span {
+  font-weight: bold;
+  padding-bottom: 10px;
+  cursor: pointer;
+  color: #bbb;
+  flex: 1;
+  text-align: center;
+}
+
+.tab-header span.active {
+  color: #1a237e;
+  border-bottom: 3px solid #ebd61d;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  background: #f5f6f8;
+  border-radius: 30px;
+  padding: 10px 15px;
+  margin-bottom: 15px;
+}
+
+.input-icon {
+  color: #888;
+  margin-right: 10px;
+}
+
+.input-group input {
+  border: none;
+  background: transparent;
+  outline: none;
+  width: 100%;
+  font-size: 14px;
+  color: #333;
+}
+
+.form-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  margin-bottom: 20px;
+  color: #888;
+}
+
+.login-button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(to right, #fbc02d, #fdd835);
+  color: #000;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.login-button:hover {
+  background: linear-gradient(to right, #f9a825, #fdd835);
+}
+
+.main-footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(47, 87, 147, 0.9); /* tono azul, semi-transparente */
+    color: white;
+    text-align: center;
+    padding: 12px 0;
+    font-size: 13px;
+    font-family: 'Segoe UI', sans-serif;
+    z-index: 3;
+}
+
+.main-footer strong {
+    color: #ebd61d; /* mismo amarillo que el texto de bienvenida */
+}
+
+.logo-image {
+  display: block;
+  margin: 0 auto 20px auto;    /* Centrado horizontal y margen inferior */
+  width: 120px;                 /* Ajusta según necesites */
+  height: auto;
+  border-radius: 12px;          /* Bordes redondeados */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25); /* Sombra suave */
+}
+
+.welcome-message
+{
+    font-weight: 400; font-size: 38pt; color: rgb(235, 214, 29); margin: 0
+}
+
+.welcome-submessage
+{
+    margin: 0; font-size: 18pt;
+}
+
+
+// Media Queries
+
+
+@media (max-width: 1430px) {
+   .welcome-message
+  {
+    font-size: 28pt;
+  }
+
+  .welcome-submessage
+  {
+      font-size: 15pt;
+  }
+
+  .logo-image {
+    width: 105px;
+  }
+
+  .content {
+    padding: 15px 15px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .welcome-message
+  {
+    font-size: 22pt;
+  }
+
+  .welcome-submessage
+  {
+      font-size: 12pt;
+  }
+
+  .logo-image {
+    width: 90px;
+  }
+
+  .content {
+    padding: 10px 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .login-card {
+    width: 80%;
+    padding: 20px;
+  }
+
+  .welcome-message {
+    font-size: 18pt;
+    text-align: center;
+  }
+
+  .welcome-submessage {
+    font-size: 11pt;
+    text-align: center;
+  }
+
+  .logo-image {
+    width: 80px;
+  }
+
+  .content {
+    padding: 10px;
+    text-align: center;
+  }
+
+  .tab-header span {
+    font-size: 12px;
+  }
+
+  .input-group {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .input-icon {
+    margin-bottom: 5px;
+  }
+
+  .form-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
+
+
+@media(max-width: 450px) {  
+    .login-wrapper {
+        top: 55%;
+        transform: translate(-50%, -55%);
+    }
+
+    .login-card {
+        padding: 20px 15px;
+        width: 90%;
+    }
+
+    .main-footer {
+        font-size: 10px;
+        padding: 8px 0;
+    }
+}
+

@@ -1,0 +1,46 @@
+<div class="background-container">
+    <div class="background-container-top">
+        <div class="overlay"></div>
+        <div class="content">
+            <p class="welcome-message">Bienvenido de <strong>Nuevo</strong></p>
+            <p class="welcome-submessage">Inicie sesión para continuar</p>
+        </div>
+    </div>
+    <div class="background-container-bottom">
+    </div>
+    <div class="login-wrapper">
+        <div class="login-card">
+            <img src="assets/Logo.jpg" alt="Logo" class="logo-image" />
+            <div class="tab-header">
+            <span class="active">INICIAR SESIÓN</span>
+            <span></span>
+            </div>
+            <form class="w-100">
+                <p-floatlabel variant="on">
+                    <input pInputText class="w-100" autocomplete="off" required/>
+                    <label for="on_label">Empresa</label>
+                </p-floatlabel>
+                <p-floatlabel class="mt-2" variant="on">
+                    <input pInputText class="w-100" autocomplete="off" required/>
+                    <label for="on_label">Usuario</label>
+                </p-floatlabel>
+                <p-floatlabel class="mt-2" variant="on">
+                    <input pInputText class="w-100" type="password"  required>
+                    <label for="on_label">Password</label>
+                </p-floatlabel>
+                <div class="form-footer mt-2">
+                    <label>
+                    <input type="checkbox">
+                        Recordarme
+                    </label>
+                    <a href="#">¿Olvidó su password?</a>
+                </div>
+                <p-button [style]="{width: '100%', backgroundColor: 'rgb(235, 214, 29)', color: '#1a237e'}" type="submit" class="w-100" label="Iniciar"></p-button>
+            </form>
+        </div>
+    </div>
+    <footer class="main-footer">
+        <p style="margin: 0;">© 2025 <strong>Control Calzado</strong> — Grupo Infoserv. Todos los derechos reservados.</p>
+    </footer>
+</div>
+
