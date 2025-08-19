@@ -289,11 +289,11 @@
 }
 
 
-@media screen and (orientation: landscape) and (max-height: 500px) {
+@media(max-height: 500px) {
   .login-card {
     width: 90%;
     padding: 20px;
-    max-height: 18rem;
+    max-height: 90vh;
     overflow-y: auto;
   }
 
